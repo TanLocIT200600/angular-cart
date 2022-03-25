@@ -1,0 +1,39 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.header {
+  background: #1e1e1e;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+
+  &-container {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  &-title {
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  &-menu {
+    &-list {
+      list-style: none;
+      display: flex;
+      color: #fff;
+      width: 30%;
+      align-items: center;
+      justify-content: space-around;
+    }
+    &-item {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
