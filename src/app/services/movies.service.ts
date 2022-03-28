@@ -13,12 +13,9 @@ export class MoviesService {
   language!: string;
   region!: string;
 
-  constructor(private http: HttpClient) {
-    this.language = 'en-US';
-    this.region = 'US';
-  }
+  constructor(private http: HttpClient) { }
 
-  getNowPlaying(page: number): Observable<any> {
-    return this.http.get(`${DOMAIN}movie/now_playing?api_key=${API_KEY}&page=${page}&language=${this.language}&region=${this.region}`);
+  getNowPlaying(): Observable<any> {
+    return this.http.get(`${DOMAIN}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`);
   }
 }
