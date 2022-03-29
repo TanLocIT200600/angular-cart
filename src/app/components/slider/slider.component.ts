@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { delay } from 'rxjs/internal/operators/delay';
 import { MoviesService } from '../../services/movies.service';
-import { Store } from '@ngrx/store'
-
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
@@ -13,17 +11,16 @@ export class SliderComponent implements OnInit {
   moviesData: any;
   tv_shows: any;
 
-  constructor(private moviesService: MoviesService, private store: Store) { }
+  constructor(private moviesService: MoviesService,) { }
 
   ngOnInit() {
-    this.getNowPlayingMovies(1);
+    this.getNowPlayingMovies()
   }
 
-  getNowPlayingMovies(page: number) {
-    this.moviesService.getNowPlaying(page).pipe(delay(2000)).subscribe((res: any) => {
+  getNowPlayingMovies() {
+    this.moviesService.getNowPlaying().pipe(delay(2000)).subscribe((res: any) => {
       this.moviesData = res.results;
-      console.log("movie-data", res.results);
-      this.store.dispatch(res.results);
+      console.log("movie-data", res.results.slice(0, 3));
     })
   }
 

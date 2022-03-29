@@ -14,9 +14,6 @@ import { HeaderComponent } from './components/includes/header/header.component';
 import { FooterComponent } from './components/includes/footer/footer.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { movieReducer } from "./store/reducers/movies.reducers";
 import { environment } from 'src/environments/environment.prod';
 
 
@@ -40,11 +37,6 @@ import { environment } from 'src/environments/environment.prod';
     // SidebarModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
-    StoreModule.forRoot({ movies: movieReducer }),
-    StoreDevtoolsModule.instrument({
-      maxAge: 25,
-      logOnly: environment.production,
-    })
   ],
   providers: [],
   bootstrap: [AppComponent]
