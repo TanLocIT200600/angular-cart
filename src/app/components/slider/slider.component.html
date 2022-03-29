@@ -1,9 +1,10 @@
 <div class="hero">
   <ng-container *ngFor="let slider of moviesData; let i = index">
-    <div class="slider" *ngIf="current == i">
-      <div class="backdrop">
-        <div class="lazyLoaded">
-          <img src="https://image.tmdb.org/t/p/original{{slider?.backdrop_path}}"
+    <div class="hero__slider" *ngIf="current == i">
+      <div class="hero__slider__backdrop">
+        <div>
+          <img class="hero__slider__backdrop--lazyLoaded"
+            src="https://image.tmdb.org/t/p/original{{slider?.backdrop_path}}"
             alt="{{slider?.title}}">
         </div>
       </div>

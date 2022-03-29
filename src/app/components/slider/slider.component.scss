@@ -1,0 +1,9 @@
+.hero {
+  &__slider {
+    &__backdrop {
+      &--lazyLoaded {
+        width: 100%;
+      }
+    }
+  }
+}
