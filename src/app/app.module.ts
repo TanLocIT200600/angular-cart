@@ -14,7 +14,7 @@ import { HeaderComponent } from './components/includes/header/header.component';
 import { FooterComponent } from './components/includes/footer/footer.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from 'src/environments/environment.prod';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -37,6 +37,7 @@ import { environment } from 'src/environments/environment.prod';
     // SidebarModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

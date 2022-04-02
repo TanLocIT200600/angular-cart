@@ -18,4 +18,8 @@ export class MoviesService {
   getNowPlaying(): Observable<any> {
     return this.http.get(`${DOMAIN}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`);
   }
+
+  getPopular(): Observable<any> {
+    return this.http.get(`${DOMAIN}movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+  }
 }
